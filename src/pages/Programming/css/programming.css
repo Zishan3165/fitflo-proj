@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.programmingheader a {
+  text-decoration: none;
+}
+
+.programmingheader header {
+  padding: 1.5em;
+  /* border-bottom: 2px solid #E5E7EB; */
+}
+.programmingheader .wrapper {
+  font-size: bold;
+}
+
+.programmingheader .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.programmingheader nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 45%;
+  z-index: 2;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: translateX 0.5s ease-in-out;
+}
+
+.programmingheader ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+
+.programmingheader nav ul li a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.programmingheader ul li.active {
+  font-weight: bold;
+}
+
+.programmingheader ul li a:hover {
+  color: #0891B2;
+  border-bottom: 2px solid #0891B2;
+}
+
+@media (min-width: 700px) {
+  .programmingheader .hamburger,
+  .close {
+    display: none;
+  }
+
+  .programmingheader .hide-mobile {
+    display: block;
+  }
+
+  .programmingheader nav {
+    position: unset;
+    height: auto;
+    background: none;
+    width: auto;
+    transform: translateX(0);
+  }
+  .programmingheader ul {
+    flex-direction: row;
+    gap: 1.6em;
+  }
+
+  .programmingheader ul li.active {
+    font-weight: bold;
+    border-bottom: 2px solid #0891B2;
+  }
+  .tabs {
+    &-black {
+      background-color: black;
+    }
+  
+    &-yellow {
+      background-color: yellow;
+    }
+  }
+}
